@@ -8,7 +8,8 @@ LABEL maintainer="xinebf <zhxz@cadavez.xyz>"
 USER root
 
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends octave gnuplot vim && \
+    apt-get install -y --no-install-recommends \
+    octave gnuplot fonts-freefont-otf vim && \
     rm -rf /var/lib/apt/lists/*
 
 USER $NB_UID
